@@ -2,3 +2,14 @@
 
 -- fpm.package: ftd-django-app.dev
 base: https://raw.githubusercontent.com/FifthTry/ftd-django-app.dev
+
+-- fpm.dependency: fifthtry.github.io/doc-site as ft
+
+-- fpm.auto-import: ft
+
+
+# Home: /
+
+# Docs: /docs
+
+## Project Setup: /project-setup
