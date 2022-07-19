@@ -1,0 +1,4 @@
+-- import: fpm
+
+-- fpm.package: ftd-django-app.dev
+base: https://raw.githubusercontent.com/FifthTry/ftd-django-app.dev
