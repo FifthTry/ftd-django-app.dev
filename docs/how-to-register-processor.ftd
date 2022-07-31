@@ -1,3 +1,34 @@
 -- ft.page: How to register your processor in `settings.py`
 
-**WIP**
+Once you have defined your processors inside `processors.py`,
+you must register these processors before using them.
+
+To do that head over to your settings.py file and
+update `TEMPLATES` to incorporate your custom defined processors.
+
+-- ft.code: Update TEMPLATES inside your settings.py
+lang: py
+
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+    # Add this block below to register your processors which will be defined inside processors.py
+    {
+        "BACKEND": "ftd_django.TemplateBackend",
+        "DIRS": ["ui"], # <- this is the directory where you would keep your ftd files
+        "OPTIONS": {
+            "PROCESSORS": ["app.processors.simple_processor"] # <- mention your processors here
+        }
+    },
+]
