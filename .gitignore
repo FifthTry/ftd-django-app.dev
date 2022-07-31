@@ -1,1 +1,5 @@
 .idea
+
+# fpm stuff
+.build
+.packages
