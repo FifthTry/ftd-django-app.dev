@@ -3,4 +3,39 @@
 This page will let you know how we can write our own custom processors
 which can be used in our ftd-django projects.
 
-**WIP**
+-- ft.h1: Processor definition
+
+It is preferred to define processors in a seperate python module `processors.py`
+kept alongside with other django app modules (views.py, urls.py etc.)
+
+-- ft.code: Simple processor example
+lang: py
+
+# Inside processor.py
+
+import ftd
+import ftd_django
+
+# This is a simple processor which returns a string "Hello World!!"
+# Any processor definition must include (doc_id, section, interpreter) as functional parameters
+@ftd_django.processor("simple_processor")
+def simple_processor(doc_id, section, interpreter):
+    # This will return the python string as ftd::Value::String
+    return ftd.string_to_value("Hello World!!")
+
+-- ft.markdown:
+
+Above mentioned code snippet shows how we can define a simple processor which returns a string to the invoker.
+But before we can use this processor in our ftd codes, we must register this processor inside settings.py.
+
+-- ft.code: How to use simple_processor inside ftd
+lang: ftd
+
+;; This will be initialized with "Hello World!!" which is returned by the above mentioned simple_processor
+\-- string text-from-processor:
+$processor$: simple_processor
+
+-- ft.markdown:
+Here the string `text-from-processor` will be initialized with "Hello World!!"
+which is returned by the `simple_processor` we just mentioned above.
+
