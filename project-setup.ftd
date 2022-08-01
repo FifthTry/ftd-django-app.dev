@@ -8,12 +8,14 @@ First, create your own Github repository which will be used as an ftd-django pro
 You can follow the official github quickstart guide [`here`](https://docs.github.com/en/get-started/quickstart/create-a-repo)
 
 -- ft.h1: Clone GitHub Repository
+
 To work with your project, clone your git repository to your local machine.
 Run this command in your terminal
 
 `git clone <your-git-repository-url>`
 
 -- ft.h1: Create Virtual Environment
+
 To ensure that the dependencies regarding the current project dont affect the other projects,
 we create a virtual environment. To create a virtual environment, run this command in your terminal
 
@@ -22,6 +24,7 @@ we create a virtual environment. To create a virtual environment, run this comma
 `virtualenv <env-directory-name>`
 
 -- ft.h1: Install Requirements
+
 Before we start working on any ftd-django project, we need to install certain python dependencies
 * `Django`
 * `ftd_sys`
@@ -51,17 +54,20 @@ To do so, run this command in your terminal
 `pip install -r requirements.txt`
 
 -- ft.h1: Create Django Project
+
 To create a django project, run this command in your terminal
 
 `django-admin startproject <project-name>`
 
 -- ft.h1: Create Django App
+
 To create django app, go inside the django project directory
 `cd <project-name>`
 
 and run `django-admin startapp <app-name>` in your terminal.
 
 -- ft.h1: Run your Project
+
 To run your project, first go inside your project directory and then
 
 Type `python manage.py runserver [port-number]`
