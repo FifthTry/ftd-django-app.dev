@@ -16,7 +16,7 @@ Run this command in your terminal
 
 -- ft.h1: Create Virtual Environment
 
-To ensure that the dependencies regarding the current project dont affect the other projects,
+To ensure that the dependencies of the current project doesn't affect the other projects,
 we create a virtual environment. To create a virtual environment, run this command in your terminal
 
 `python -m venv <env-directory-name>`
