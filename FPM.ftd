@@ -7,9 +7,12 @@ base: https://raw.githubusercontent.com/FifthTry/ftd-django-app.dev
 
 -- fpm.auto-import: ft
 
+-- fpm.sitemap:
 
 # Home: /
 
-# Docs: /docs
+# Docs: /docs/
+- How to write your own processor: /docs/how-to-write-your-own-processor
+- How to register your processor in `settings.py`: /docs/how-to-register-processor/
 
-## Project Setup: /project-setup
+# Project Setup: /project-setup/
