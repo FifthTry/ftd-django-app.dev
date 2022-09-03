@@ -1,7 +1,7 @@
 -- import: fpm
 
 -- fpm.package: ftd-django-app.dev
-base: https://raw.githubusercontent.com/FifthTry/ftd-django-app.dev
+download-base-url: https://raw.githubusercontent.com/FifthTry/ftd-django-app.dev
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ft
 
